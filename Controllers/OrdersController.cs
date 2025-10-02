@@ -143,6 +143,16 @@ namespace PizzaDelivery.Controllers
             return Ok();
         }
 
+        [HttpPost("{id}/checkout")]
+        public async Task<IActionResult> Checkout(int id)
+        {
+            return Ok(new
+            {
+                message = "Checkout successful"
+            });
+        }
+
+
         private OrderDto GetFrom(Order order)
         {
             var result = new OrderDto
